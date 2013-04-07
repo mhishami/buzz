@@ -1,0 +1,13 @@
+{application, buzz,
+ [
+  {description, "A new take on forums"},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  cowboy
+                 ]},
+  {mod, { buzz_app, []}},
+  {env, []}
+ ]}.
