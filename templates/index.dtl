@@ -18,6 +18,7 @@
 
     <section class="top-bar-section">
       <!-- Left Nav Section -->
+      {% if auth %}
       <ul class="left">
         <li class="divider"></li>
         <li>
@@ -36,6 +37,7 @@
         </li>
        
       </ul>
+      {% endif %}
 
       <!-- Right Nav Section -->
       <ul class="right">
@@ -54,6 +56,8 @@
           </ul>
         </li>
         {% else %}
+        <li><a href="https://172.16.1.104:8443/auth/register">Register</a></li>
+        <li class="divider"></li>
         <li><a href="https://172.16.1.104:8443/auth/login">Login</a></li>
         {% endif %}
       </ul>

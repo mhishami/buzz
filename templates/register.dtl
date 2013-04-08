@@ -19,38 +19,36 @@
             <label>Password (Again)</label>
             <input type="password" name="password2" placeholder="Re-type your secret password">
           </div>
-          <div class="row">
+          <div class="row collapse">
             <label>Mobile Number</label>
-            <div class="large-4 small-4 columns">
+            <div class="large-5 small-5 columns">
               <select>
                 {% for p in prefix %}
                 <option>+601{{ p }}</option>
                 {% endfor %}
               </select>
             </div>
-            <div class="large-8 small-8 columns">
-              <span class="prefix">                
-                <input type="text" name="mobile_no" placeholder="2223333">
-              </span>
+            <div class="large-7 small-7 columns">
+              <input type="text" name="mobile_no" placeholder="2223333">
             </div>
           </div>
-          <div class="row">
+          <div class="row collapse">
             <label for="customDropdown1">Birth Date</label>
-            <div class="large-4 columns">
+            <div class="large-3 small-3 columns">
               <select id="customDropdown1" class="medium">
                 {% for d in days %}
                 <option>{{ d }}</option>
                 {% endfor %}
               </select>
             </div>
-            <div class="large-4 columns">
+            <div class="large-5 small-5 columns">
               <select id="customDropdown2" class="medium">
                 {% for m in months %}
                 <option>{{ m }}</option>
                 {% endfor %}
               </select>
             </div>
-            <div class="large-4 columns">
+            <div class="large-4 small-4 columns">
               <select id="customDropdown3" class="medium">
                 {% for y in years %}
                 <option>{{ y }}</option>

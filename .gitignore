@@ -3,3 +3,4 @@ ebin/*
 deps/*
 .DS_Store
 log/*
+priv/db/*
