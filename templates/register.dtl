@@ -22,34 +22,34 @@
           <div class="row collapse">
             <label>Mobile Number</label>
             <div class="large-5 small-5 columns">
-              <select>
+              <select name="prefix">
                 {% for p in prefix %}
                 <option>+601{{ p }}</option>
                 {% endfor %}
               </select>
             </div>
             <div class="large-7 small-7 columns">
-              <input type="text" name="mobile_no" placeholder="2223333">
+              <input type="text" name="number" placeholder="2223333">
             </div>
           </div>
           <div class="row collapse">
             <label for="customDropdown1">Birth Date</label>
             <div class="large-3 small-3 columns">
-              <select id="customDropdown1" class="medium">
+              <select id="customDropdown1" name="day" class="medium">
                 {% for d in days %}
                 <option>{{ d }}</option>
                 {% endfor %}
               </select>
             </div>
             <div class="large-5 small-5 columns">
-              <select id="customDropdown2" class="medium">
+              <select id="customDropdown2" name="month" class="medium">
                 {% for m in months %}
                 <option>{{ m }}</option>
                 {% endfor %}
               </select>
             </div>
             <div class="large-4 small-4 columns">
-              <select id="customDropdown3" class="medium">
+              <select id="customDropdown3" name="year" class="medium">
                 {% for y in years %}
                 <option>{{ y }}</option>
                 {% endfor %}
