@@ -59,7 +59,7 @@ doc:
 
 dev:
 	@erl -pa ebin include deps/*/ebin deps/*/include ebin include -boot start_sasl \
-		-s buzz -s reloader \
+		-s buzz -s reloader -s tuah \
 		-config priv/app.config \
 		-sname buzz
 

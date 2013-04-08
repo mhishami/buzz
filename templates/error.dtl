@@ -5,11 +5,12 @@
   <div class="row">
     <div class="large-6 columns push-3 error">
       <h2>Oppsss.....</h2>
-      <div class="panel radius">
-        <h5>Error</h5>
-        <p>{{ path }} Not found</p>
-        <a href="/" class="button">Home</a>
+      <div data-alert class="alert-box alert">
+        <!-- Your content goes here -->
+        <p class="alert-error">{{ error }}</p>
+        <a href="#" class="close">&times;</a>
       </div>
+      <a href="/" class="button">Home</a>
     </div>
   </div>
   

@@ -1,0 +1,55 @@
+{% extends "base.dtl" %}
+
+{% block body %}
+
+  <div class="row">
+    <div class="large-6 columns push-3">
+      <div class="panel login">
+        <h2>Buzz Register</h2>
+        <form class="custom" method="post">
+          <div class="row">
+            <label>Email</label>
+            <input type="text" name="email" placeholder="Your email">
+          </div>
+          <div class="row">
+            <label>Password</label>
+            <input type="password" name="password1" placeholder="Your secret password">
+          </div>
+          <div class="row">
+            <label>Password (Again)</label>
+            <input type="password" name="password2" placeholder="Re-type your secret password">
+          </div>
+          <div class="row">
+            <label for="customDropdown1">Birth Date</label>
+            <div class="large-4 columns">
+              <select id="customDropdown1" class="medium">
+                {% for d in days %}
+                <option>{{ d }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="large-4 columns">
+              <select id="customDropdown2" class="medium">
+                {% for m in months %}
+                <option>{{ m }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="large-4 columns">
+              <select id="customDropdown3" class="medium">
+                {% for y in years %}
+                <option>{{ y }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <button class="button">Register</button>
+            <a href="/auth/login" class="button secondary">Login</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}
