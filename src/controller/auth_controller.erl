@@ -30,7 +30,8 @@ handle_request(<<"POST">>, <<"login">>, _Args, [_, {sid, Sid}, _, {qs_body, Vals
             {<<"login">>, [{error, <<"Email or password is wrong">>}]}
     end;
 
-handle_request(<<"GET">>, <<"logout">>, _Args, [_, {sid, Sid}, _, _], _Req) ->
+handle_request(<<"GET">>, <<"logout">>, _Args, [{auth, User}, {sid, Sid}, _, _], _Req) ->
+    lager:log(info, self(), "User ~p logged out. Session = ~p", [User, Sid]),
     tuah:delete(Sid),
     {redirect, <<"/">>};
 
@@ -41,8 +42,9 @@ handle_request(<<"GET">>, <<"register">>, _Args, _Params, _Req) ->
         <<"Jul">>, <<"Aug">>, <<"Sep">>, <<"Oct">>, <<"Nov">>, <<"Dec">>
     ],
     Years = lists:seq(1970, 2013-18),
+    Prefix = lists:seq(0, 9),
     
-    {<<"register">>, [{days, Days}, {months, Months}, {years, Years}]};
+    {<<"register">>, [{days, Days}, {months, Months}, {years, Years}, {prefix, Prefix}]};
 
 handle_request(_, _, _, _, _) ->
     {error, <<"Oppsss, Forbidden!">>}.

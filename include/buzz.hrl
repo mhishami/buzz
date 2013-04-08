@@ -1,6 +1,24 @@
 
--define (INFO(Name), error_logger:info_msg(Name)).
--define (INFO(Name, Args), error_logger:info_msg(Name, Args)).
+-define (INFO(Name), lager:log(info, self(), Name)).
+-define (INFO(Name, Args), lager:log(info, self(), Name, Args)).
+-define (DEBUG(Name), lager:log(debug, self(), Name)).
+-define (DEBUG(Name, Args), lager:log(debug, self(), Name, Args)).
 
--define (get_path(Path), tl(binary:split(Path, <<"/">>, [global]))).
--define (get_action(Path), lists:nth(2, tl(binary:split(Path, <<"/">>, [global])))).
+%% records
+%       +------+        +-------+
+%       |      |        |       |
+%       | User +-------<| Group +---+
+%       |      |        |       |   |
+%       +-+--+-+        +----+--+   |
+%         |  |                      |
+%         |  +-------+              |
+%       +-+-------+  |  +------+    |
+%       |         |  |  |      |    |
+%       | Profile |  +-<| Post |>---+
+%       |         |     |      |
+%       +---------+     +------+
+%
+-record(user, {'_id', email, password, join_date, update_date, groups}).
+-record(profile, {'_id', email, first_name, last_name, mobile_no, avatar}).
+-record(post, {'_id', group, author, post, posted_date, update_date}).
+-record(group, {'_id', admin, desc, members}).

@@ -20,6 +20,21 @@
             <input type="password" name="password2" placeholder="Re-type your secret password">
           </div>
           <div class="row">
+            <label>Mobile Number</label>
+            <div class="large-4 small-4 columns">
+              <select>
+                {% for p in prefix %}
+                <option>+601{{ p }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="large-8 small-8 columns">
+              <span class="prefix">                
+                <input type="text" name="mobile_no" placeholder="2223333">
+              </span>
+            </div>
+          </div>
+          <div class="row">
             <label for="customDropdown1">Birth Date</label>
             <div class="large-4 columns">
               <select id="customDropdown1" class="medium">
