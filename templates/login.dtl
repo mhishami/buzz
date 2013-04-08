@@ -1,0 +1,26 @@
+{% extends "base.dtl" %}
+
+{% block body %}
+
+  <div class="row">
+    <div class="large-6 columns push-3">
+      <div class="panel login">
+        <h2>Buzz Login</h2>
+        <form method="post">
+          <div class="row">
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Your username">
+          </div>
+          <div class="row">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Your secret password">
+          </div>
+          <div class="row">
+            <button class="button">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}

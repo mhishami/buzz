@@ -1,0 +1,5 @@
+
+footer div { font-size: .9em; }
+.error, .login { margin-top: 40px; }
+.login form { margin: 10px;}
+.login form label { margin-bottom: 10px; }

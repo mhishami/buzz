@@ -60,8 +60,8 @@ doc:
 dev:
 	@erl -pa ebin include deps/*/ebin deps/*/include ebin include -boot start_sasl \
 		-s buzz -s reloader \
-		-eval "io:format(\"Point your browser at https://localhost:8443~n\")."
-		
+		-config priv/app.config \
+		-sname buzz
 
 analyze: checkplt
 	@rebar skip_deps=true dialyze

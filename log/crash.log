@@ -1,0 +1,7 @@
+2013-04-07 21:29:37 =ERROR REPORT====
+** Cowboy handler auth_handler terminating in handle/2
+   for the reason error:undef
+** Handler state was undefined
+** Request was [{socket,#Port<0.6135>},{transport,ranch_tcp},{connection,keepalive},{pid,<0.293.0>},{method,<<"GET">>},{version,{1,1}},{peer,{{127,0,0,1},55585}},{host,<<"localhost">>},{host_info,undefined},{port,8080},{path,<<"/auth/login">>},{path_info,[<<"login">>]},{qs,<<>>},{qs_vals,undefined},{fragment,<<>>},{bindings,[]},{headers,[{<<"host">>,<<"localhost:8080">>},{<<"user-agent">>,<<"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10">>},{<<"accept">>,<<"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8">>},{<<"dnt">>,<<"1">>},{<<"cache-control">>,<<"max-age=0">>},{<<"accept-language">>,<<"en-us">>},{<<"accept-encoding">>,<<"gzip, deflate">>},{<<"connection">>,<<"keep-alive">>}]},{p_headers,[{<<"connection">>,[<<"keep-alive">>]}]},{cookies,undefined},{meta,[]},{body_state,waiting},{multipart,undefined},{buffer,<<>>},{resp_compress,false},{resp_state,waiting},{resp_headers,[]},{resp_body,<<>>},{onresponse,undefined}]
+** Stacktrace: [{lager,info,["auth: Method=~p, Path=~p",[<<"GET">>,<<"/auth/login">>]],[]},{auth_handler,handle,2,[{file,"src/handler/auth_handler.erl"},{line,13}]},{cowboy_handler,handler_handle,4,[{file,"src/cowboy_handler.erl"},{line,119}]},{cowboy_protocol,execute,4,[{file,"src/cowboy_protocol.erl"},{line,514}]}]
+

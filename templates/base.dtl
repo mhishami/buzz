@@ -5,15 +5,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
-  <title>Foundation 4</title>
+  <title>BuZz .:</title>
 
   <link rel="stylesheet" href="/static/css/normalize.css" />
   <link rel="stylesheet" href="/static/css/foundation.css" />
+  <link rel="stylesheet" href="/static/css/buzz.css" />
   <script src="/static/js/vendor/custom.modernizr.js"></script>
 
 </head>
 <body>
-
+  {% block body %}
   <div class="row">
     <div class="large-12 columns">
       <h2>Welcome to Foundation</h2>
@@ -93,7 +94,28 @@
       </ul>
     </div>
   </div>
+  {% endblock %} <!-- body -->
+  <!-- Footer -->
 
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr />
+      <div class="row">
+        <div class="large-5 columns">
+          <p>&copy; 2013 Buzz. Another app by ZayMobileTech. All rights reserved</p>
+        </div>
+        <div class="large-7 columns">
+          <ul class="inline-list right">
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
   <script>
   document.write('<script src=' +
   ('__proto__' in {} ? '/static/js/vendor/zepto' : '/static/js/vendor/jquery') +
